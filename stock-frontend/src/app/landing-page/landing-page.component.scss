@@ -1,0 +1,30 @@
+.content-container {
+    background: rgba(245, 245, 245, 1);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    button {
+        border: none;
+        text-transform: uppercase;
+        width: 90px;
+        height: auto;
+    }
+    .news-group {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        div {
+            background: rgba(34, 34, 34, 1);
+            color: rgba(245, 245, 245, 1);
+            padding: 2rem;
+            font-size: .8rem;
+            border-radius: 10px;
+        }
+    }
+    
+}

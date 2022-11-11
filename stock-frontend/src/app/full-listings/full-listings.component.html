@@ -1,0 +1,17 @@
+<div class="table">
+    <h1>Explore all Recommendations by TripleA</h1>
+    <table>
+        <tr>
+            <th>Stock Name</th>
+            <th>ISIN</th>
+            <th>Date</th>
+            <th>Price</th>
+        </tr>
+        <tr *ngFor="let stockListing of stockListings">
+            <td>{{stockListing.stockName}}</td>
+            <td>{{stockListing.isin}}</td>
+            <td>{{stockListing.recommendationDate}}</td>
+            <td>{{stockListing.price}}</td>
+        </tr>
+    </table>
+</div>

@@ -5,6 +5,17 @@
     overflow: hidden;
 
     a {
+      .logo-0 {
+        text-transform: uppercase;
+        color: rgb(183, 201, 94);
+        font-weight: 900;
+      }
+      .logo-1 {
+        text-transform: uppercase;
+        color: rgba(64, 160, 27, 0.939);
+        text-shadow: darkgray;
+      }
+      
         float: left;
         display: block;
         color: #f2f2f2;
@@ -17,12 +28,18 @@
             color: black;
         }
         &:active {
-            background-color: #04AA6D;
+            background-color: #bb5317;
             color: white;
         }
     }
-    .icon {
-        
+    .right-part {
+      width: 10%;
+      float: right;
+      display: flex;
+      flex-direction: row;
+      padding: 14px 16px;
+      color: #f2f2f2;
+      justify-content: space-between;
     }
   }
   

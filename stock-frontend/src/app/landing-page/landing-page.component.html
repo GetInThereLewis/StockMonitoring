@@ -1,0 +1,38 @@
+
+<div class="content-container">
+    <div class="news-group">
+        <div class="latest perfomance ">
+            <h1>Apple</h1>
+            <h1>ISIN</h1>
+            <p>Most Recent Recommendation</p>
+    
+        </div>
+        <div class="best-performance perfomance">
+            <i class="bi bi-graph-up-arrow"></i>
+            <p>Todays Top Performer</p>
+        </div>
+        <div class="worst-perfomance perfomance">
+            <i class="bi bi-graph-down-arrow"></i>
+            <p>Todays Worst Performer</p>
+        </div>
+    </div>
+    <app-content-box contentImg='../../assets/podcast-alles-auf-aktien-header-image-removebg-preview (1).png' contentTxt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quo nesciunt laborum ullam mollitia, vitae a porro! Nisi, illum impedit eligendi culpa, maiores neque, dolore odio tenetur corporis recusandae est.">
+        <button class="btn-style">
+    
+            Explore the Recommended Stocks now!
+    
+        </button>
+    </app-content-box>
+    
+        
+    <app-content-box contentImg='https://images.pexels.com/photos/5561913/pexels-photo-5561913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' contentTxt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quo nesciunt laborum ullam mollitia, vitae a porro! Nisi, illum impedit eligendi culpa, maiores neque, dolore odio tenetur corporis recusandae est."> 
+        <button (click)="state ? requestData() : sendData()">requestData</button>
+
+    </app-content-box>
+   
+    
+        
+    
+    
+    <button (click)="state ? requestData() : sendData()">requestData</button>
+</div>

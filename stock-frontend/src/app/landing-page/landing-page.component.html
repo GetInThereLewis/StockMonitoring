@@ -16,30 +16,23 @@
             <p>Todays Worst Performer</p>
         </div>
     </div>
-
-    <div class="content-section">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quo nesciunt laborum ullam mollitia, vitae a porro! Nisi, illum impedit eligendi culpa, maiores neque, dolore odio tenetur corporis recusandae est.
-
-        </p>
-        <img src="../../assets/podcast-alles-auf-aktien-header-image-removebg-preview (1).png"/>
+    <app-content-box contentImg='../../assets/podcast-alles-auf-aktien-header-image-removebg-preview (1).png' contentTxt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quo nesciunt laborum ullam mollitia, vitae a porro! Nisi, illum impedit eligendi culpa, maiores neque, dolore odio tenetur corporis recusandae est.">
         <button class="btn-style">
     
             Explore the Recommended Stocks now!
     
         </button>
-    </div>
-    <div class="content-section-2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quo nesciunt laborum ullam mollitia, vitae a porro! Nisi, illum impedit eligendi culpa, maiores neque, dolore odio tenetur corporis recusandae est.
+    </app-content-box>
+    
+        
+    <app-content-box contentImg='https://images.pexels.com/photos/5561913/pexels-photo-5561913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' contentTxt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quo nesciunt laborum ullam mollitia, vitae a porro! Nisi, illum impedit eligendi culpa, maiores neque, dolore odio tenetur corporis recusandae est."> 
+        <button (click)="state ? requestData() : sendData()">requestData</button>
 
-        </p>
-        
-        <img src="https://images.pexels.com/photos/5561913/pexels-photo-5561913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-            
+    </app-content-box>
+   
     
-        
-    </div>
         
     
     
-  
+    <button (click)="state ? requestData() : sendData()">requestData</button>
 </div>

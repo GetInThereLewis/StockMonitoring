@@ -1,8 +1,8 @@
 
 <div class="content-container">
     <h1>Add a new Stock..</h1>
-    <form>
-        <input type="text" placeholder="stockname" name="stockname" id="stockname">
+    <form #stockListingForm= "ngForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="stockname" name="stockname" id="stockname" >
         <input type="text" placeholder="isin" name="isin" id="isin">
         <input type="text" placeholder="stockname" name="stockname" id="stockname">
         <input type="text" placeholder="stockname" name="stockname" id="stockname">

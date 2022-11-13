@@ -7,22 +7,25 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FullListingsComponent } from './full-listings/full-listings.component';
 import { AddListingRestrictedComponent } from './add-listing-restricted/add-listing-restricted.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 import {HttpClientModule} from '@angular/common/http';
+import { ContentBoxComponent } from './content-box/content-box.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LandingPageComponent,
     FullListingsComponent,
-    AddListingRestrictedComponent
+    AddListingRestrictedComponent,
+    ContentBoxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

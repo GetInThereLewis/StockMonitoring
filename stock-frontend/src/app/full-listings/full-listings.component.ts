@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 @Component({
   selector: 'app-full-listings',
   templateUrl: './full-listings.component.html',
-  styleUrls: ['./full-listings.component.scss']
+  
 })
 export class FullListingsComponent implements OnInit {
   stockListings: stockListing[];

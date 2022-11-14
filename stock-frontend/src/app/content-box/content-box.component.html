@@ -1,5 +1,10 @@
 <section>
-    <p *ngIf="displayTxt.length < 0">{{Text}}</p>
-    <img *ngIf="displayImg.length < 0" src={{displayImg}}>
+    <div class="text-container">
+        <p *ngIf="contentTxt">{{contentTxt}}</p>
+    </div>
     
+    <div class="img-container">
+        <img alt="img" *ngIf="contentImg" src="{{contentImg}}">
+        <div class="img-overlay">{{imgSub}}</div>
+    </div>
 </section>

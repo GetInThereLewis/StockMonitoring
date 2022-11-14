@@ -16,7 +16,7 @@
             <p>Todays Worst Performer</p>
         </div>
     </div>
-    <app-content-box contentImg='../../assets/podcast-alles-auf-aktien-header-image-removebg-preview (1).png' contentTxt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quo nesciunt laborum ullam mollitia, vitae a porro! Nisi, illum impedit eligendi culpa, maiores neque, dolore odio tenetur corporis recusandae est.">
+    <app-content-box contentImg={{imgBox[0]}} contentTxt={{txtBox[0]}} imgSub="quatsch">
         <button class="btn-style">
     
             Explore the Recommended Stocks now!
@@ -25,7 +25,7 @@
     </app-content-box>
     
         
-    <app-content-box contentImg='https://images.pexels.com/photos/5561913/pexels-photo-5561913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' contentTxt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quo nesciunt laborum ullam mollitia, vitae a porro! Nisi, illum impedit eligendi culpa, maiores neque, dolore odio tenetur corporis recusandae est."> 
+    <app-content-box contentImg={{imgBox[1]}} contentTxt={{txtBox[1]}} imgSub="quatsch"> 
         <button (click)="state ? requestData() : sendData()">requestData</button>
 
     </app-content-box>

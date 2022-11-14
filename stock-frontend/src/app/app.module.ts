@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import {HttpClientModule} from '@angular/common/http';
 import { ContentBoxComponent } from './content-box/content-box.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { ContentBoxComponent } from './content-box/content-box.component';
     LandingPageComponent,
     FullListingsComponent,
     AddListingRestrictedComponent,
-    ContentBoxComponent
+    ContentBoxComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

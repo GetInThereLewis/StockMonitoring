@@ -7,16 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ContentBoxComponent implements OnInit {
 
-  displayTxt: string;
-  displayImg: string;
+  
   @Input() styles;
-  @Input() contentImg;
-  @Input() contentTxt;
+  @Input() imgSub = "";
+  @Input() contentImg = "";
+  @Input() contentTxt = "";
   constructor() { }
 
   ngOnInit(): void {
-    this.displayImg = this.contentImg;
-    this.displayTxt = this.contentTxt;
+    
   }
 
 }

@@ -1,6 +1,4 @@
 // Color Scheme 
-@import "~bootstrap-icons/font/bootstrap-icons.css";
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
 $eerie-black: rgba(34, 34, 34, 1);
 $onyx: rgba(61, 61, 61, 1);
 $davys-grey: rgba(87, 87, 87, 1);
@@ -11,8 +9,13 @@ $dark-electric-blue: rgba(80, 101, 119, 1);
 $prussian-blue: rgba(24, 53, 76, 1);
 $indigo-dye: rgba(20, 59, 90, 1);
 $indigo-dye-2: rgba(41, 77, 105, 1);
+$dark-grayxblack: #333;
 
-
+// File imports
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
+@import './2-modules/modules-dir';
+@import './1-pages/pages_dir';
 html, * {
     margin: 0;
     padding: 0;
@@ -27,4 +30,5 @@ body {
     body{
         background: $indigo-dye;
     }
+
 }

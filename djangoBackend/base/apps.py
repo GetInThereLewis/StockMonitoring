@@ -10,4 +10,5 @@ class BaseConfig(AppConfig):
         from .BackgroundDataGatherer import DataGatherer
         gatherer = DataGatherer()
         gatherer.print_stocks()
+        #gatherer.update_stock_prices()
 

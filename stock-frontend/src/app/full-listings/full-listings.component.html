@@ -8,11 +8,11 @@
             <th>Date</th>
             <th>Price</th>
         </tr>
-        <tr *ngFor="let stockListing of stockListings">
+        <tr *ngFor="let stockListing of stockListings; let i= index;">
             <td>{{stockListing.stockName}}</td>
             <td>{{stockListing.isin}}</td>
             <td>{{stockListing.recommendationDate | date:'dd.MM.yyyy HH:mm'}}</td>
-            <td>{{stockListing.price}}</td>
+            <td>{{stockListing.price | currency: "EUR"}}</td>
         </tr>
     </table>
 </div>

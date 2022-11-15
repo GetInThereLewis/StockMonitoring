@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule } from '@angular/forms';
-import { stockListing } from '../types';
+import { stockListing } from '../stockListing';
 import { Router, Route } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 @Component({

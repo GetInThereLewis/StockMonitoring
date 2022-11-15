@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { stockListingArray } from 'src/dummy-data/listings';
-import { stockListing } from '../types';
+import { stockListing } from '../stockListing';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 @Component({
   selector: 'app-full-listings',
@@ -13,6 +13,7 @@ export class FullListingsComponent implements OnInit {
 
   ngOnInit(): void {
     this.stockListings = stockListingArray;
+    
   }
   
   /**

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { Observable } from 'rxjs';
-import { Chart } from "chart.js"
+import { Chart } from "chart.js/auto"
 
 @Component({
   selector: 'app-test-page',
@@ -11,8 +11,9 @@ import { Chart } from "chart.js"
 export class TestPageComponent implements OnInit {
   chart;
   ctx;
-  xData = [1,2,3,4];
-  yData = [51, 20, 76, 100];
+
+  xData;
+  yData;
   dataExample = [
     { year: 2010, count: 10 },
     { year: 2011, count: 20 },
@@ -25,32 +26,41 @@ export class TestPageComponent implements OnInit {
   stockData;
   dataReceived = false;
   constructor(private http:HttpClient) {
-    this.http.get<Observable<any>>("http://localhost:8000/all_stock_symbols/")
+    this.http.get("http://localhost:8000/stock_price_data/aapl")
     .subscribe(data => {
-      this.stockData = data;
+
+      // Convert it to readable format
+      this.stockData = Object.entries(data).map(entry => entry[1]);
+      
       console.log(this.stockData);
       
+      // Map time to x and price to y axis data
+      this.xData = this.stockData.map(row => row["date_time"])
+      this.yData = this.stockData.map(row => row["price"])
+      
+      this.renderChart()
       this.ctx = document.getElementById('canvas');
-/*       this.chart = new Chart(this.ctx, {
-        type:"bar",
-        data: {
-          labels: this.dataExample.map(row => row.year),
-          datasets: [
-            {
-              label: "Test bla",
-              data: this.dataExample.map(row => row.count),
-              borderColor: "3cba9f",
-              
-            },
-          ]
-        }
-      }
-      ) */
     })
   }
 
 
   ngOnInit(): void {
+  }
+
+  public renderChart(){
+    this.chart = new Chart("canvas", {
+      type: "line",
+      data : {
+        labels: this.xData,
+        datasets: [{
+          label: "Prices",
+          data: this.yData,
+          backgroundColor: "red",
+          borderColor: "red",
+        }
+        ]
+      }
+    })
   }
 
   public getStockData(){

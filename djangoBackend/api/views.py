@@ -10,6 +10,7 @@ from itertools import chain
 
 @api_view(["GET"])
 def stock_price_data(request, stock_symbol):
+    stock_symbol = stock_symbol.upper()
     all_stock_symbols_tuple = list(Stock_table.objects.values_list("ticker_symbol")) #Output is list of nested tuples
     all_stock_symbols = list(chain.from_iterable(all_stock_symbols_tuple)) # Flatten the tuple list to list of strings
     

@@ -1,11 +1,18 @@
 from base.models import Stock_price_table
 from base.models import Stock_table
 import yfinance as yf
+import threading
+import datetime
+import time
 
-class DataGatherer:
+class DataGatherer(threading.Thread):
     list_of_tracked_stocks = []
 
-    def __init__(self):
+    def __init__(self, thread_name, thread_ID): 
+        threading.Thread.__init__(self) 
+        self.thread_name = thread_name 
+        self.thread_ID = thread_ID
+        
         self.list_of_tracked_stocks = self.reload_tracked_stocks()
         
     
@@ -25,3 +32,13 @@ class DataGatherer:
             Stock_price_table.objects.create(ticker_symbol=stock["ticker_symbol"], price=current_price)
 
         print("Updated stock prices")
+
+    def run(self):
+        print("Thread running")
+        while True:
+            weekday = datetime.datetime.now().weekday()
+            """    if weekday == 5 or weekday == 6:
+                # Weekend
+                continue """
+            self.update_stock_prices()
+            time.sleep(20)

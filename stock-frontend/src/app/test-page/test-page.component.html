@@ -3,6 +3,6 @@
 <ng-template #stillLoading><p>Loading...</p></ng-template> -->
 
 
-<div class="container">
-    
+<div *ngIf="chart">
+    <canvas id="canvas" >{{ chart }}</canvas>
 </div>

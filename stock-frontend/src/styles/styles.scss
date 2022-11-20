@@ -13,22 +13,12 @@ $dark-grayxblack: #333;
 
 // File imports
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
 @import './2-modules/modules-dir';
 @import './1-pages/pages_dir';
-html, * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+
 body {
     
     color: $onyx;
-}
-@media (max-width: 600px) {
-    body{
-        background: $indigo-dye;
-    }
-
 }

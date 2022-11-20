@@ -4,9 +4,12 @@ import yfinance as yf
 import threading
 import datetime
 import time
+import sys
 
+stop_thread = False
 class DataGatherer(threading.Thread):
     list_of_tracked_stocks = []
+    
 
     def __init__(self, thread_name, thread_ID): 
         threading.Thread.__init__(self) 
@@ -35,10 +38,13 @@ class DataGatherer(threading.Thread):
 
     def run(self):
         print("Thread running")
-        while True:
+        while not stop_thread:
             weekday = datetime.datetime.now().weekday()
             """    if weekday == 5 or weekday == 6:
                 # Weekend
                 continue """
             self.update_stock_prices()
             time.sleep(20)
+        
+        print("Thread stopped.")
+        sys.exit()

@@ -1,0 +1,56 @@
+<nav class="navbar-customs navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <span class="logo-0">Stock</span>
+        <span class="logo-1">Monitoring</span>
+      </a>
+      <button
+      (click)="toggleNav()"
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="stock-nav"
+        aria-controls="stock-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div [ngClass]="{'collapse': collapsed, 'navbar-collapse': true, 'collapsed-style': collapsedStyle}" id="stock-nav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link link-style" aria-current="page" href="#">
+                    Charts <i class="bi bi-bar-chart-line-fill icon"></i>    
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-style" aria-current="page" href="#">
+                    Watch <i class="icon bi bi-box-fill"></i> 
+                </a>
+            </li>
+            
+          
+          
+        </ul>
+        <div [ngClass]="{'right-container': true, 'collapse': collapsedStyle}">
+          <i class=" me-2 darkmode-switch bi bi-github"></i>
+          <i class="me-2 bi bi-moon-fill"></i>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+<!--
+  <i class="bi bi-bar-chart-line-fill icon"></i>
+<i class="icon bi bi-coin"></i>
+<i class="icon bi bi-box-fill"></i></a>
+<i class="bi bi-sun-fill"></i>
+ <i class=" darkmode-switch bi bi-github"></i>
+        <i class="bi bi-moon-fill"></i>
+        <i class="bi bi-sun-fill"></i> 
+ <i class="bi bi-list"></i> 
+<div class="right-container">
+            <i class=" me-2 darkmode-switch bi bi-github"></i>
+            <i class="me-2 bi bi-moon-fill"></i>
+        </div>-->

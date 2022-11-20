@@ -1,120 +1,33 @@
+.navbar-customs {
+  
+  .link-style, i{
+    color: $cultured;
 
-
-.navbar {
-    background-color: #333;
-    overflow: hidden;
-
-
-    a {
-      .logo-0 {
-        text-transform: uppercase;
-        color: rgb(183, 201, 94);
-        font-weight: 900;
-      }
-      .logo-1 {
-        text-transform: uppercase;
-        color: rgba(64, 160, 27, 0.939);
-        text-shadow: darkgray;
-      }
+    
+  }
+  a:hover {
       
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        &:hover {
-
-            background-color: rgba(64, 160, 27, 0.939);
-            color: black;
-        }
-        &:active {
-            background-color: #bb5317;
-            color: white;
-        }
-    }
-    .right-part {
-      width: 10%;
-      float: right;
-      display: flex;
-      flex-direction: row;
-      padding: 14px 16px;
-      color: #f2f2f2;
-      justify-content: space-between;
-    }
+      color: $indigo-dye-2;
+    
   }
-  .mobile-menu {
-    display: none;
-    visibility: hidden;
-    .hamburger-menu {
-        color: white;
-    }
+  .logo-0 {
+    text-transform: uppercase;
+    color: rgb(183, 201, 94);
+    font-weight: 900;
+  }
+  .logo-1 {
+    text-transform: uppercase;
+    color: rgba(64, 160, 27, 0.939);
+    text-shadow: darkgray;
   }
   
-  @media screen and (max-width: 600px) {
-    .navbar {
-        display: grid;
-        max-height: 100px;
-        grid-template-columns: 20% 60% 20%;
-        grid-template-rows: none;
-    }
-    .link-element {
-        display: none;
-        visibility: hidden;
-    }
-    .right-part {
-        display: none;
-        visibility: hidden;
-    }
-    .mobile-menu {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        visibility:visible;
-        .hamburger-menu {
-            font-size: 2rem;
-            &:hover {
-                cursor: pointer;
-                color: rgb(183, 201, 94);
-            }
-            &:active {
-                transform: rotate(90deg);
-            }
-        } 
-    }
-    .logo {
-        grid-column-start: 2;
-        display: block;
-        visibility:visible;
-        a {
-            display: flex;
-            justify-content: left;
-        }
-    }
+}
+.collapsed-style {
+  ul {
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
-  /*
-  @media screen and (max-width: 600px) {
-    .navbar a:not(:first-child) {display: none;}
-    .navbar a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) 
-  @media screen and (max-width: 600px) {
-    .navbar.responsive {position: relative;}
-    .navbar.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .navbar.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }*/
+}
+    

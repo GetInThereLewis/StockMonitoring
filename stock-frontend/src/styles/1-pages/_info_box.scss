@@ -1,0 +1,50 @@
+.info-box {
+    border-radius: 20px;
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: 1fr 1fr;
+    width: 20vw;
+    height: 30vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1vw;
+    
+    .content-heading {
+        font-size: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: $dark-grayxblack;
+        
+        text-transform: uppercase;
+        color: $cultured;
+        background: $battleship-grey;
+        grid-row: 1;
+    }
+    .inline-content {
+        grid-row: 2;
+        font-size: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: $eerie-black;
+        color: $cultured;
+        
+        i {
+            color: $cultured;
+            font-size: 10vw;
+            font-weight: 900;
+        }
+    }
+   
+}
+
+.red {
+    color: rgb(165, 24, 24);
+}
+
+.green {
+    color: green;
+}

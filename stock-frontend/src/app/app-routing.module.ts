@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
-import { FullListingsComponent } from './full-listings/full-listings.component';
-import { AddListingRestrictedComponent } from './add-listing-restricted/add-listing-restricted.component';
-import { TestPageComponent } from './test-page/test-page.component';
+import { FullListingsComponent } from './components/full-listings/full-listings.component';
+import { AddListingRestrictedComponent } from './components/add-listing-restricted/add-listing-restricted.component';
+import { TestPageComponent } from './components/test-page/test-page.component';
 const routes: Routes = [
   {path: '', redirectTo:'/home', pathMatch:'full'}, 
   {path: 'home', component: LandingPageComponent}, 

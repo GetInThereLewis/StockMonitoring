@@ -1,0 +1,36 @@
+<section>
+    <div class="news-group">
+        <app-info-box stockCardBool= "True" isin="MSFT" content="Performer"  styles="bi bi-graph-up-arrow">
+    
+        </app-info-box>
+        <app-info-box  content="Explore.." currentValue="20.2" styles="bi bi-pie-chart">
+    
+        </app-info-box>
+        <app-info-box stockCardBool= "True" content="non-perfomance" isin="MSFT" currentValue="20.2" styles="bbi bi-graph-down-arrow">
+        </app-info-box>
+        
+
+    </div>
+    <div class="content-container">
+    
+        <app-content-box contentImg={{imgBox[0]}} contentTxt={{txtBox[0]}} imgSub="quatsch">
+            <button class="btn-style">
+        
+                Explore the Recommended Stocks now!
+        
+            </button>
+        </app-content-box>
+        
+            
+        <app-content-box contentImg={{imgBox[1]}} contentTxt={{txtBox[1]}} imgSub="quatsch"> 
+            <button (click)="state ? requestData() : sendData()">requestData</button>
+    
+        </app-content-box>
+       
+        
+            
+        
+        
+        <button (click)="state ? requestData() : sendData()">requestData</button>
+    </div>
+</section>

@@ -20,21 +20,29 @@
       <div [ngClass]="{'collapse': collapsed, 'navbar-collapse': true, 'collapsed-style': collapsedStyle}" id="stock-nav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link link-style" aria-current="page" href="#">
+                <a routerLink='testpage' class="nav-link link-style" aria-current="page" href="#">
                     Charts <i class="bi bi-bar-chart-line-fill icon"></i>    
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link link-style" aria-current="page" href="#">
+                <a routerLink='all-listings' class="nav-link link-style" aria-current="page" href="#">
                     Watch <i class="icon bi bi-box-fill"></i> 
                 </a>
             </li>
+            <li class="nav-item">
+              <a routerLink='admin-panel/add' class="nav-link link-style" aria-current="page" href="#">
+                  Test-Page <i class="icon bi bi-box-fill"></i> 
+              </a>
+          </li>
             
           
           
         </ul>
         <div [ngClass]="{'right-container': true, 'collapse': collapsedStyle}">
-          <i class=" me-2 darkmode-switch bi bi-github"></i>
+          <a href="https://github.com/GetInThereLewis/StockMonitoring">
+            <i class="me-2 darkmode-switch bi bi-github" routerLink="https://github.com/GetInThereLewis/StockMonitoring"></i>
+          </a>
+         
           <i class="me-2 bi bi-moon-fill"></i>
       </div>
       </div>

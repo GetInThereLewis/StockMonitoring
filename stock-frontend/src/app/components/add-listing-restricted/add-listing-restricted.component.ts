@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule } from '@angular/forms';
-import { stockListing } from '../stockListing';
+import { stockListing } from '../../stockListing';
 import { Router, Route } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-add-listing-restricted',
   templateUrl: './add-listing-restricted.component.html',
-  styleUrls: ['./add-listing-restricted.component.scss']
+ 
 })
 export class AddListingRestrictedComponent implements OnInit {
 

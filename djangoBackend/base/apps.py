@@ -7,10 +7,15 @@ class BaseConfig(AppConfig):
     name = 'base'
     
     def ready(self):    
-        from .BackgroundDataGatherer import DataGatherer
+        #from .BackgroundDataGatherer import DataGatherer
         #gatherer = DataGatherer()
         #gatherer.update_stock_prices()
 
-        bg_thread = DataGatherer("Thread1", 1)
+        #bg_thread = DataGatherer("Thread1", 1)
         #bg_thread.start()
+
+        from .HistoricalGatherer import HistoricalGatherer
+        gatherer = HistoricalGatherer()
+        gatherer.fill_database()
+        
 

@@ -1,3 +1,10 @@
+<ng-container 
+>
+    <form>
+        
+    </form>
+</ng-container>
+
 <div class="container" *ngIf="this.dataReceived; else stillLoading">
     <div *ngFor="let symbol of this.stock_symbols">
         <canvas id = "canvas{{symbol}}"></canvas>

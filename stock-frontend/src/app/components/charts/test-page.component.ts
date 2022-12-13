@@ -1,20 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import { Chart } from "chart.js/auto"
+import { Chart, Scale } from "chart.js/auto"
 
+const MONTHS = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
 @Component({
   selector: 'app-test-page',
-  templateUrl: './test-page.component.html',
-  styleUrls: ['./test-page.component.scss']
+  templateUrl: './charts.component.html',
+  
 })
 export class TestPageComponent implements OnInit {
+
   chart;
   xData;
   yData;
   stock_symbols = [];
   stock_data;
   dataReceived = false;
-
+  
   constructor(private http:HttpClient) {
     // Get all symbols
     this.http.get("http://localhost:8000/all_stock_symbols")
@@ -38,6 +53,16 @@ export class TestPageComponent implements OnInit {
         let xData = stock_data.map(row => row["date_time"])
         let yData = stock_data.map(row => row["price"])
         
+        let datasets = [];
+        /*stock_data.forEach(
+          datasets.push(
+            {
+              label: stock_data["ticker_symbol"],
+              data: 
+            }
+          )
+          
+        )*/
         this.renderChart(xData, yData, symbol)
     })}.bind(this))
   this.dataReceived = true});
@@ -46,8 +71,10 @@ export class TestPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  
   public renderChart(xData, yData, symbol){
+    
     this.chart = new Chart("canvas" + symbol, {
       type: "line",
       data : {
@@ -55,11 +82,26 @@ export class TestPageComponent implements OnInit {
         datasets: [{
           label: symbol,
           data: yData,
-          backgroundColor: "red",
-          borderColor: "red",
+          backgroundColor: "#333",
+          borderColor: "#333",
+          fill: false,
+          tension: 0.1
         }
         ]
+      },
+      options: {
+        scales: {
+          x: {
+              ticks: {
+                autoSkip: true,
+                maxTicksLimit: 10,
+                maxRotation: 0,
+                minRotation: 0
+              }
+          }
       }
+      }
+     
     })
   }
 }

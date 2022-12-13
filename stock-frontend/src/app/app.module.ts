@@ -11,7 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { ContentBoxComponent } from './components/content-box/content-box.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { TestPageComponent } from './components/test-page/test-page.component';
+import { TestPageComponent } from './components/charts/test-page.component';
 import { BootstrapnavComponent } from './components/bootstrapnav/bootstrapnav.component';
 import { InfoBoxComponent } from './components/info-box/info-box.component';
 

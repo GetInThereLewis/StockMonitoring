@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RequestDataService } from './services/request-data.service';
+import { RequestDataService } from './request-data.service';
 
 describe('RequestDataService', () => {
   let service: RequestDataService;

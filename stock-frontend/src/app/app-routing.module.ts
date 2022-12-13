@@ -4,7 +4,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 
 import { FullListingsComponent } from './components/full-listings/full-listings.component';
 import { AddListingRestrictedComponent } from './components/add-listing-restricted/add-listing-restricted.component';
-import { TestPageComponent } from './components/test-page/test-page.component';
+import { TestPageComponent } from './components/charts/test-page.component';
 const routes: Routes = [
   {path: '', redirectTo:'/home', pathMatch:'full'}, 
   {path: 'home', component: LandingPageComponent}, 
